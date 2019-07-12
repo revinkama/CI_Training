@@ -13,15 +13,9 @@ public class WalletRepoImpl implements WalletRepo{
 		super();
 	}
 	
-	public WalletRepoImpl(HashSet<Customer> cust) {
-		super();
-		this.customers = cust;
-	}
-	
 	
 	@Override
 	public Customer save(Customer cust) {
-		// TODO Auto-generated method stu
 		customers.add(cust);
 		return cust;
 	}
