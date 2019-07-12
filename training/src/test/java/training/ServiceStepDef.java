@@ -14,7 +14,6 @@ import cucumber.api.java.en.When;
 public class ServiceStepDef {
 
 	private WalletServiceImpl wallServ;
-	//private WalletRepoImpl repo;
 	private Customer cust;
 	private String name;
 	private String pNum;
