@@ -73,5 +73,7 @@ public class Customer {
 		return "Customer [name=" + name + ", phoneNumber=" + phoneNumber + ", wallet=" + wallet + "]";
 	}
 	
+	//This project helps
+	
 	
 }
