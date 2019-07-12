@@ -6,12 +6,18 @@ import ci.training.beans.Customer;
 import ci.training.beans.Wallet;
 import ci.training.exceptions.InsufficientBalanceException;
 import ci.training.repo.WalletRepo;
+import ci.training.repo.WalletRepoImpl;
 
 public class WalletServiceImpl implements WalletService{
 
 	private WalletRepo repo;
 
 	public WalletServiceImpl(WalletRepo repo) {
+		super();
+		this.repo = repo;
+	}
+	
+	public WalletServiceImpl(WalletRepoImpl repo) {
 		super();
 		this.repo = repo;
 	}
@@ -22,7 +28,7 @@ public class WalletServiceImpl implements WalletService{
 			throw new IllegalArgumentException();
 		}
 		Customer customer = new Customer(name,phone, new Wallet(amount));
-		if(repo.save(customer)){
+		if(repo.save(customer) != null){
 			return customer;
 		}
 		return null;
