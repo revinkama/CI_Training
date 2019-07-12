@@ -32,7 +32,7 @@ public class WalletRepoImpl implements WalletRepo{
 	public Customer find(String phoneNo) {
 		// TODO Auto-generated method stub
 		for(Customer c: customers) {
-			if(c.getPhoneNumber() == phoneNo) {
+			if(c.getPhoneNumber().equals(phoneNo)) {
 				return c;
 			}
 		}
